@@ -27,7 +27,7 @@
           :initial-zoom="12"
           :lat="32.79022033885513"
           :lng="130.6899234447686"
-          :options={radius:setting.radius}
+          :options={radius:setting.radius,gestureHandling:gesture_type}
           class="ma-0"
         ></vue-google-heatmap>
         <v-snackbar
@@ -83,6 +83,7 @@ export default {
       loading: false,
       success: false,
       datas: [],
+      gesture_type: 'greedy',
       setting: {
         radius: 0  // 設定を読み込む前に参照されるため
       }
