@@ -27,7 +27,7 @@
           :initial-zoom="12"
           :lat="32.79022033885513"
           :lng="130.6899234447686"
-          :options={radius:setting.radius,gestureHandling:gesture_type}
+          :options={radius:setting.radius}
           class="ma-0"
         ></vue-google-heatmap>
         <v-snackbar
