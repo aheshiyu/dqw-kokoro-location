@@ -279,7 +279,7 @@ export default {
 
         this.$store.dispatch({
           type: 'save_setting',
-          setting: this.setting
+          setting: JSON.parse(JSON.stringify(this.setting)) // shallowコピーによって，キー削除時に日付変更のご認識があるため
         })
         
         if (this.is_change_period()) {

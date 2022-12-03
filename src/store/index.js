@@ -20,6 +20,8 @@ const state = {
 const mutations = {
   save_setting (state, { setting }) {
     state.setting = { ...setting }
+    delete setting.start_date
+    delete setting.end_date
     localStorage.setItem('setting', JSON.stringify(setting))
   },
   load_setting (state) {
